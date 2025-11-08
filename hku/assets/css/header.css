@@ -1,0 +1,128 @@
+.topHeader .top-menu {
+    display: flex;
+    flex-direction: row;
+}
+.top-navigation-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    flex-direction: column;
+    position: absolute;
+    width: 150px;
+    top: 40px;
+    right: 0px;
+    padding: var(--wp--preset--spacing--20);
+    color: var(--wp--preset--color--contrast);
+    background-color: var(--wp--preset--color--base);
+    z-index: 999;
+    box-shadow: var(--wp--preset--shadow--boxshadow);
+    border-radius: 10px;
+}
+
+.top-navigation-list li {
+    display: inline-flex;
+    margin-top: 0;
+}
+
+.main-navigation-list {
+    list-style-type: none;
+    float: left;
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: start;
+}
+
+.main-navigation-list li {
+    display: inline-flex;
+    margin-top: 0;
+}
+
+.main-navigation-list li > a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainHeader {
+    position: relative;
+    justify-content: space-between;
+}
+
+#mainHeader .logo {
+    flex-basis: 15%;
+}
+#mainHeader .search-burger {
+    flex-basis: 20%;
+}
+
+.custom-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.header-icons {
+    flex-direction: row;
+    gap: var(wp--preset--spacing--10);
+}
+
+div.mobile-header {
+    z-index: 40;
+    padding: var(--wp--preset--spacing--20);
+}
+
+div.mobile-header .close-button {
+    fill: var(--wp--preset--color--base);
+    margin: 0;
+    padding: 0;
+}
+
+a.burger-button {
+    display: none;
+    visibility: hidden;
+}
+
+.sub-mobile-menu {
+    background: var(--wp--preset--color--base);
+}
+
+.mobile-navigation-list > li > a {
+    padding-bottom: var(--wp--preset--spacing--10);
+    padding-top: var(--wp--preset--spacing--10);
+    font-size: var(--wp--preset--font-size--large);
+    color: var(--wp--preset--color--base);
+}
+.mobile-navigation-list > li > a svg {
+    fill: var(--wp--preset--color--base);
+}
+
+.language-switcher {
+    display: flex;
+    gap: var(--wp--preset--spacing--10);
+    align-items: center;
+}
+
+.language-switcher .current-lang {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+    .custom-logo {width: 120px}
+    .hide-mobile { display: none !important; }
+    .topHeader { display: none }
+    a.burger-button { display: flex; visibility: visible }
+    .desktopMenu { display: none }
+    #mainHeader .logo, #mainHeader .search-burger {
+        flex-basis: 50%;
+    }
+
+    .no-mobile-padding {
+        padding: 0;
+    }
+}
+

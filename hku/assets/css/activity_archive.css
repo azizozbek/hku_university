@@ -1,0 +1,64 @@
+.activities {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--wp--preset--spacing--40);
+    margin-top: var(--wp--preset--spacing--40);
+}
+
+.activity_card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--wp--preset--shadow--boxshadow);
+    border-radius: 10px;
+    position: relative;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.activity_card.top-gap {
+    padding-top: var(--wp--preset--spacing--80);
+}
+
+.activity_card .date {
+    position: absolute;
+    left: var(--wp--preset--spacing--10);
+    top: var(--wp--preset--spacing--10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--wp--preset--spacing--10);
+    background-color: var(--wp--preset--color--dark-red);
+    color: var(--wp--preset--color--base);
+    border-radius: 10px;
+    box-shadow: var(--wp--preset--shadow--boxshadow);
+
+}
+
+.activities .date .day {
+    font-size: var(--wp--preset--font-size--large);
+}
+
+.activity_card img {
+    height: auto;
+    width: auto;
+}
+
+.activity_card .activity_details h4 {
+    margin: 0;
+    padding: var(--wp--preset--spacing--20);
+}
+
+@media (max-width: 1000px) {
+    .activities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 768px) {
+    .activities {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .activity_card.top-gap {
+        padding-top: calc(var(--wp--preset--spacing--80) + var(--wp--preset--spacing--40));
+    }
+}

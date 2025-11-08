@@ -1,0 +1,361 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Hasan Kalyoncu University\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-07 09:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.3.17\n"
+"X-Domain: hku"
+
+#: patterns/breadcrumbs.php:31 src/PostTypeActivity.php:26
+#: src/PostTypeActivity.php:27
+msgid "Activity"
+msgstr ""
+
+#: src/PostTypeActivity.php:29
+msgid "Add New Activity"
+msgstr ""
+
+#: src/PostTypeNews.php:24
+msgid "Add New News"
+msgstr ""
+
+#: src/PostTypeSlider.php:19
+msgid "Add New Slider"
+msgstr ""
+
+#: patterns/numbers.php:65
+msgid "Akademik Personel"
+msgstr ""
+
+#: patterns/activities.php:40
+msgid "Aktiviteler"
+msgstr ""
+
+#: patterns/header.php:133 patterns/header.php:135
+msgid "Ara"
+msgstr ""
+
+#: patterns/numbers.php:97
+msgid "Araştırma Merkezi"
+msgstr ""
+
+#. Author of the theme
+msgid "Aziz Ozbek"
+msgstr ""
+
+#: src/PostTypeActivity.php:240
+msgid "Bitis Tarihi Baslangic Tarihinden önce olamaz"
+msgstr ""
+
+#: patterns/header.php:135
+msgid "Bişeyler yaz..."
+msgstr ""
+
+#: src/ActivityTypesEnum.php:42 src/ActivityTypesEnum.php:67
+msgid "Buluştay"
+msgstr ""
+
+#. Description of the theme
+msgid "Default theme for Hasan Kalyoncu University."
+msgstr ""
+
+#: src/PostTypeActivity.php:30
+msgid "Edit Activity"
+msgstr ""
+
+#: src/PostTypeNews.php:25
+msgid "Edit News"
+msgstr ""
+
+#: src/PostTypeSlider.php:20
+msgid "Edit Slider"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:33 src/ActivityTypesEnum.php:58
+msgid "Eğitim"
+msgstr ""
+
+#: patterns/numbers.php:81
+msgid "Fakülte"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:45 src/ActivityTypesEnum.php:70
+msgid "Fuar"
+msgstr ""
+
+#: patterns/news.php:19
+msgid "Haberler"
+msgstr ""
+
+#. Name of the theme
+msgid "Hasan Kalyoncu University"
+msgstr ""
+
+#: src/ActivityFormsEnum.php:17 src/ActivityFormsEnum.php:26
+msgid "Hibrit"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://azizozbek.ch"
+msgstr ""
+
+#. URI of the theme
+msgid "https://hku.edu.tr"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:38 src/ActivityTypesEnum.php:63
+msgid "Konferenz"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:50 src/ActivityTypesEnum.php:75
+msgid "Kongres"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:39 src/ActivityTypesEnum.php:64
+msgid "Konser"
+msgstr ""
+
+#: patterns/numbers.php:33
+msgid "Mezun"
+msgstr ""
+
+#: src/PostTypeActivity.php:28 src/PostTypeActivity.php:31
+msgid "New Activity"
+msgstr ""
+
+#: src/PostTypeNews.php:23 src/PostTypeNews.php:26
+msgid "New News"
+msgstr ""
+
+#: src/PostTypeSlider.php:18 src/PostTypeSlider.php:21
+msgid "New Slider"
+msgstr ""
+
+#: patterns/activitiy_archive.php:96
+msgid "Newer"
+msgstr ""
+
+#: patterns/breadcrumbs.php:27 src/PostTypeNews.php:21 src/PostTypeNews.php:22
+msgid "News"
+msgstr ""
+
+#: src/PostTypeActivity.php:34
+msgid "No Activity Found"
+msgstr ""
+
+#: src/PostTypeActivity.php:35
+msgid "No Activity found in Trash"
+msgstr ""
+
+#: src/PostTypeNews.php:29
+msgid "No News Found"
+msgstr ""
+
+#: src/PostTypeNews.php:30
+msgid "No News found in Trash"
+msgstr ""
+
+#: src/PostTypeSlider.php:24
+msgid "No Slider Found"
+msgstr ""
+
+#: src/PostTypeSlider.php:25
+msgid "No Slider found in Trash"
+msgstr ""
+
+#: patterns/activitiy_archive.php:97
+msgid "Older"
+msgstr ""
+
+#: src/ActivityFormsEnum.php:15 src/ActivityFormsEnum.php:24
+msgid "Online"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:49 src/ActivityTypesEnum.php:74
+msgid "Panel"
+msgstr ""
+
+#: patterns/footer.php:2
+msgctxt "Pattern description"
+msgid "Footer columns with logo, title, tagline and links."
+msgstr ""
+
+#: patterns/mobileheader.php:2
+msgctxt "Pattern description"
+msgid "Mobile header with site title and navigation."
+msgstr ""
+
+#: patterns/sidemenu.php:2
+msgctxt "Pattern description"
+msgid "Sidebar Menu for the sub pages"
+msgstr ""
+
+#: patterns/header.php:2
+msgctxt "Pattern description"
+msgid "Site header with site title and navigation."
+msgstr ""
+
+#: patterns/breadcrumbs.php:2
+msgctxt "Pattern title"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: patterns/footer.php:2
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/activities.php:2
+msgctxt "Pattern title"
+msgid "Get the latest activities"
+msgstr ""
+
+#: patterns/news.php:2
+msgctxt "Pattern title"
+msgid "Get the latest news"
+msgstr ""
+
+#: patterns/numbers.php:2
+msgctxt "Pattern title"
+msgid "Get the university numbers"
+msgstr ""
+
+#: patterns/header.php:2
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/activitiy_properties.php:2
+msgctxt "Pattern title"
+msgid "List activity details"
+msgstr ""
+
+#: patterns/activitiy_archive.php:2
+msgctxt "Pattern title"
+msgid "List all activities"
+msgstr ""
+
+#: patterns/slider-query-loop.php:2
+msgctxt "Pattern title"
+msgid "List of posts, 1 column"
+msgstr ""
+
+#: patterns/mobileheader.php:2
+msgctxt "Pattern title"
+msgid "Mobile Header"
+msgstr ""
+
+#: patterns/sidemenu.php:2
+msgctxt "Pattern title"
+msgid "Side Menu"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:36 src/ActivityTypesEnum.php:61
+msgid "Poster Sunumu"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:46 src/ActivityTypesEnum.php:71
+msgid "Program"
+msgstr ""
+
+#: patterns/numbers.php:18
+msgid "Rakamlarla Hasan Kalyoncu"
+msgstr ""
+
+#: src/PostTypeActivity.php:33
+msgid "Search Activity"
+msgstr ""
+
+#: src/PostTypeNews.php:28
+msgid "Search News"
+msgstr ""
+
+#: src/PostTypeSlider.php:23
+msgid "Search Slider"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:34 src/ActivityTypesEnum.php:59
+msgid "Seminer"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:35 src/ActivityTypesEnum.php:60
+msgid "Sempozyum"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:37 src/ActivityTypesEnum.php:62
+msgid "Sergi"
+msgstr ""
+
+#: src/PostTypeSlider.php:16 src/PostTypeSlider.php:17
+msgid "Slider"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:43 src/ActivityTypesEnum.php:68
+msgid "Sosyal Sorumluluk Projesi"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:40 src/ActivityTypesEnum.php:65
+msgid "Sportif Etkinlik"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:48 src/ActivityTypesEnum.php:73
+msgid "Söyleşi"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:47 src/ActivityTypesEnum.php:72
+msgid "Tasarım"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:44 src/ActivityTypesEnum.php:69
+msgid "Tiyatro"
+msgstr ""
+
+#: patterns/activities.php:84
+msgid "Tüm Aktiviteler"
+msgstr ""
+
+#: patterns/news.php:80
+msgid "Tüm Haberler"
+msgstr ""
+
+#: src/PostTypeActivity.php:32
+msgid "View Activity"
+msgstr ""
+
+#: src/PostTypeNews.php:27
+msgid "View News"
+msgstr ""
+
+#: src/PostTypeSlider.php:22
+msgid "View Slider"
+msgstr ""
+
+#: patterns/sidemenu.php:43
+msgid "Yan Menü"
+msgstr ""
+
+#: src/ActivityFormsEnum.php:16 src/ActivityFormsEnum.php:25
+msgid "Yüz Yüze"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:41 src/ActivityTypesEnum.php:66
+msgid "Çalıştay"
+msgstr ""
+
+#: patterns/numbers.php:49
+msgid "Öğrenci"
+msgstr ""
+
+#: src/ActivityTypesEnum.php:32 src/ActivityTypesEnum.php:57
+msgid "Öğrenci Topluluğu Etkinliği"
+msgstr ""

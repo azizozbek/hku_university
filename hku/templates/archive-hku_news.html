@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","theme":"hku"} /-->
+<!-- wp:pattern {"slug":"hku/breadcrumbs"} /-->
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60)"><!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+
+    <!-- wp:query {"queryId":61,"query":{"perPage":10,"pages":0,"offset":0,"postType":"hku_news","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
+    <div class="wp-block-query"><!-- wp:post-template {"style":{"border":{"width":"0px","style":"none"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
+        <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}},"shadow":"var:preset|shadow|boxshadow"},"backgroundColor":"base","layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group has-base-background-color has-background" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);box-shadow:var(--wp--preset--shadow--boxshadow)"><!-- wp:post-featured-image {"isLink":true,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} /-->
+
+            <!-- wp:post-title {"level":3,"isLink":true} /-->
+
+            <!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":false,"excerptLength":15,"style":{"layout":{"selfStretch":"fit","flexSize":null}}} /-->
+
+            <!-- wp:post-date /--></div>
+        <!-- /wp:group -->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination {"paginationArrow":"arrow","showLabel":false,"layout":{"type":"flex","justifyContent":"center"}} -->
+        <!-- wp:query-pagination-previous {"fontSize":"large"} /-->
+
+        <!-- wp:query-pagination-numbers {"midSize":1,"fontSize":"regular"} /-->
+
+        <!-- wp:query-pagination-next {"fontSize":"large"} /-->
+        <!-- /wp:query-pagination -->
+
+        <!-- wp:query-no-results -->
+        <!-- wp:paragraph {"placeholder":"No news."} -->
+        <p></p>
+        <!-- /wp:paragraph -->
+        <!-- /wp:query-no-results --></div>
+    <!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"hku"} /-->
