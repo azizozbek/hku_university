@@ -25,13 +25,11 @@
                 <div class="wp-block-group"><!-- wp:site-logo {"width":200,"shouldSyncIcon":true} /-->
 
                     <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-                    <div class="wp-block-group"><!-- wp:image {"id":13646,"width":"100px","sizeSlug":"large","linkDestination":"none"} -->
-                        <figure class="wp-block-image size-large is-resized"><img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/google-play-app.webp'; ?>" alt="" class="wp-image-13646" style="width:100px"/></figure>
-                        <!-- /wp:image -->
+                    <div class="wp-block-group">
+                        <figure class="wp-block-image size-large is-resized"><img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/google-play-app.webp'; ?>" alt="" style="width:100px"/></figure>
 
-                        <!-- wp:image {"id":13645,"width":"100px","sizeSlug":"large","linkDestination":"none"} -->
-                        <figure class="wp-block-image size-large is-resized"><img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/app-store-logo.webp'; ?>" alt="" class="wp-image-13645" style="width:100px"/></figure>
-                        <!-- /wp:image --></div>
+                        <figure class="wp-block-image size-large is-resized"><img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/app-store-logo.webp'; ?>" alt="" style="width:100px"/></figure>
+                        </div>
                     <!-- /wp:group --></div>
                 <!-- /wp:group -->
 
