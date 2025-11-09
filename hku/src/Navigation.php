@@ -20,6 +20,7 @@ class Navigation
 
         if (!$menuId) {
 
+            restore_current_blog();
             return;
         }
 
@@ -41,6 +42,7 @@ class Navigation
 
         if (!$menuId) {
 
+            restore_current_blog();
             return;
         }
 
@@ -86,6 +88,7 @@ class Navigation
 
         if (!$menuId) {
 
+            restore_current_blog();
             return [];
         }
 
