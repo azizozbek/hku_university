@@ -42,6 +42,12 @@ $list = [
     $parent_url => $parent,
 ];
 
+//faculty subpage
+if ($facultyId == 0 && is_front_page()) {
+    $list[get_blogaddress_by_id(get_current_blog_id())] = get_blog_option(get_current_blog_id(), 'blogname');
+}
+
+
 
 $title = '';
 if (is_archive()) {

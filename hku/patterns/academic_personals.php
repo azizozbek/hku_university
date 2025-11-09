@@ -25,13 +25,15 @@ function academic_personals() {
     $department = \HKU\Theme\DepartmentEnum::tryFrom(get_bloginfo('blogname'));
     switch_to_locale($currentLocale);
 
-    if (is_null($faculty) && is_null($department)) {
-        return [];
+    if ($facultyId == 0 && !is_null($faculty) ) {
+        return $getAcademicPersonal->getByFaculty($faculty);
     }
 
-    return ($facultyId == 0)
-        ? $getAcademicPersonal->getByFaculty($faculty)
-        : $getAcademicPersonal->getByDepartment($department);
+    if ($facultyId != 0 && !is_null($department)) {
+        return $getAcademicPersonal->getByDepartment($department);
+    }
+
+    return [];
 }
 
 $personals = academic_personals();

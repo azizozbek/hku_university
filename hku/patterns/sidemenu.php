@@ -10,7 +10,7 @@ global $post;
 
 function sidemenu($post) {
 
-    if ($post->post_parent == 0 && is_front_page()) {
+    if (is_null($post) || ($post->post_parent == 0 && is_front_page())) {
         $menu = 'faculty_'.pll_current_language();
         return wp_nav_menu([
             'menu' => $menu,
@@ -42,7 +42,7 @@ if ($facultyId != 0) {
     $parent_url = get_blogaddress_by_id($facultyId);
 }
 
-if ($post->post_parent != 0) {
+if (!is_null($post) && $post->post_parent != 0) {
     $parent = get_the_title($post->post_parent);
     $parent_url = get_permalink($post->post_parent);
 }
