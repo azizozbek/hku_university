@@ -15,7 +15,7 @@ class Navigation
 
     public function prepare_top_navigation_list(): void {
 
-        switch_to_blog( 1 );
+        //switch_to_blog( 1 );
         $menuId = wp_get_nav_menu_object("top");
 
         if (!$menuId) {
@@ -36,7 +36,7 @@ class Navigation
 
     public function prepare_main_navigation_list(): void {
 
-        switch_to_blog( 1 );
+        //switch_to_blog( 1 );
         $menuId = wp_get_nav_menu_object("main");
 
         if (!$menuId) {
@@ -82,7 +82,7 @@ class Navigation
     {
         $blogId = get_current_blog_id();
         if ($blogId != 1) {
-            switch_to_blog( 1 );
+            //switch_to_blog( 1 );
         }
 
         $menuId = wp_get_nav_menu_object("quick_access");
