@@ -26,7 +26,13 @@ if ($facultyId != 0 && !is_front_page()) {
     $parent_url = get_blogaddress_by_id(get_current_blog_id());
 }
 
+//faculty subpage
+if ($facultyId == 0 && !is_front_page()) {
+    $parent = get_blog_option(get_current_blog_id(), 'blogname') ;
+    $parent_url = get_blogaddress_by_id(get_current_blog_id());
+}
 
+//page with parent
 if (!is_null(get_post_parent())) {
     $parent = get_the_title(get_post_parent());
     $parent_url = get_permalink(get_post_parent());

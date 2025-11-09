@@ -11,8 +11,8 @@ $from = get_query_var('from');
 $page = get_query_var('page');
 
 $filter = array(
-    'hku_activity_start' => array(
-        'key' => 'hku_activity_start',
+    'hku_activity_end' => array(
+        'key' => 'hku_activity_end',
         'value' => date('Y-m-d H:i:s'),
         'type' => 'date',
         'compare' => '>=',
