@@ -7,7 +7,6 @@
  * Description: Footer columns with logo, title, tagline and links.
  *
  */
-
 ?>
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"},"margin":{"top":"0"}},"border":{"top":{"color":"#cccccc","width":"1px"}}},"layout":{"type":"constrained"}} -->
@@ -27,11 +26,11 @@
 
                     <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
                     <div class="wp-block-group"><!-- wp:image {"id":13646,"width":"100px","sizeSlug":"large","linkDestination":"none"} -->
-                        <figure class="wp-block-image size-large is-resized"><img src="https://hku.edu.tr.ddev.site/wp-content/uploads/2025/10/google-play-app-1024x303.webp" alt="" class="wp-image-13646" style="width:100px"/></figure>
+                        <figure class="wp-block-image size-large is-resized"><img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/google-play-app.webp'; ?>" alt="" class="wp-image-13646" style="width:100px"/></figure>
                         <!-- /wp:image -->
 
                         <!-- wp:image {"id":13645,"width":"100px","sizeSlug":"large","linkDestination":"none"} -->
-                        <figure class="wp-block-image size-large is-resized"><img src="https://hku.edu.tr.ddev.site/wp-content/uploads/2025/10/app-store-logo-1024x303.webp" alt="" class="wp-image-13645" style="width:100px"/></figure>
+                        <figure class="wp-block-image size-large is-resized"><img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/app-store-logo.webp'; ?>" alt="" class="wp-image-13645" style="width:100px"/></figure>
                         <!-- /wp:image --></div>
                     <!-- /wp:group --></div>
                 <!-- /wp:group -->

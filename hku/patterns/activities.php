@@ -53,7 +53,7 @@ $query = new WP_Query( $args );
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <span class="embla__lazy-load__spinner"></span>
                             <?php endif; ?>
-                            <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => "https://hku.edu.tr.ddev.site/wp-content/uploads/2025/10/hku-logo-colorful-tr.webp"]); ?>
+                            <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => "https://www.hku.edu.tr/wp-content/uploads/2018/12/hku-logo-colorful-tr.webp"]); ?>
                             <a class="details" href="<?php echo get_the_permalink() ?>">
                                 <h4 class="title font-regular"><?php echo the_title() ?></h4>
                                 <div class="info">
