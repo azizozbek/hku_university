@@ -133,7 +133,7 @@ $navigation = new Navigation();
                 <div class="search-layout overlay hidden">
                     <div>
                         <h2><?php echo __("Ara", "hku") ?></h2>
-                        <form method="get">
+                        <form method="get" action="<?php echo get_site_url() ?>">
                             <input type="text" name="s" alt="<?php _e("Ara", "hku"); ?>" placeholder="<?php _e("Bişeyler yaz...", "hku"); ?>">
                         </form>
                     </div>

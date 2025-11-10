@@ -16,10 +16,6 @@ Text Domain: hku
  * https://github.com/WordPress/gutenberg/issues/42319
  */
 @import "assets/css/embla.css";
-@import "assets/css/activity_archive.css";
-@import "assets/css/activity_single.css";
-@import "assets/css/aside.css";
-@import "assets/css/header.css";
 
 :root {
 	--faded-black: rgb(0 0 0 / 5%);
@@ -796,6 +792,24 @@ img.news-image {
 
 /*** ACADEMIC PAGE END ***/
 
+
+/*** Search Result START ***/
+
+.search-result ul.search-types h2 {
+	margin-bottom: var(--wp--preset--spacing--10);
+}
+.search-result ul.search-types li {
+	display: flex;
+	flex-direction: column;
+	padding: var(--wp--preset--spacing--20);
+	background-color: var(--faded-black);
+	margin-bottom: var(--wp--preset--spacing--10);
+}
+.search-result ul.search-types li a {
+	font-weight: 500;
+}
+
+/*** Search Result END ***/
 @media (max-width: 768px) {
 
 	:root {

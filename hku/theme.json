@@ -622,6 +622,11 @@
 			"area": "uncategorized",
 			"name": "sidemenu",
 			"title": "Sidemenu"
+		},
+		{
+			"area": "uncategorized",
+			"name": "searchresult",
+			"title": "Global Search Result"
 		}
 	],
 	"customTemplates": [
