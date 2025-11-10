@@ -14,22 +14,27 @@ $parent_url = get_blogaddress_by_id(1);
 
 $facultyId = get_option(\HKU\Theme\AddFacultyOption::OPTION_NAME);
 
-//department front
+
+//department
 if ($facultyId != 0) {
-    $parent = get_blog_option($facultyId, 'blogname') ;
-    $parent_url = get_blogaddress_by_id($facultyId);
+    if (is_front_page()) {
+        //department front
+        $parent = get_blog_option($facultyId, 'blogname') ;
+        $parent_url = get_blogaddress_by_id($facultyId);
+    } else {
+        //department subpage
+        $parent = get_blog_option(get_current_blog_id(), 'blogname') ;
+        $parent_url = get_blogaddress_by_id(get_current_blog_id());
+    }
 }
 
-//department subpage
-if ($facultyId != 0 && !is_front_page()) {
-    $parent = get_blog_option(get_current_blog_id(), 'blogname') ;
-    $parent_url = get_blogaddress_by_id(get_current_blog_id());
-}
 
-//faculty subpage
-if ($facultyId == 0 && !is_front_page()) {
-    $parent = get_blog_option(get_current_blog_id(), 'blogname') ;
-    $parent_url = get_blogaddress_by_id(get_current_blog_id());
+//faculty
+if ($facultyId == 0) {
+    if (!is_front_page()) {
+        $parent = get_blog_option(get_current_blog_id(), 'blogname') ;
+        $parent_url = get_blogaddress_by_id(get_current_blog_id());
+    }
 }
 
 //page with parent
