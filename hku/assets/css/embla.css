@@ -322,9 +322,12 @@
         min-width: auto;
     }
 
-
     .embla__button, .embla__dot, .embla__dot:after {
         width: 1rem;
         height: 1rem;
+    }
+
+    .slider_content {
+        padding: var(--wp--preset--spacing--10);
     }
 }

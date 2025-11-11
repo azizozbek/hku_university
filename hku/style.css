@@ -437,15 +437,30 @@ a.burger-button {
 	margin: 0;
 }
 
-.search-layout > div > form > input {
+.search-layout > div > form label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: end;
+}
+.search-layout > div > form input {
+	background: var(--faded-black);
+	border: none;
+}
+
+.search-layout > div > form input[type=text] {
 	padding:  var(--wp--preset--spacing--20);
 	width: 100%;
-	border: none;
-	background: rgb(0 0 0 / 5%);
 	font-size: var(--wp--preset--font-size--normal);
 	font-family: var(--wp--preset--font-family--poppins);
 }
-
+.search-layout > div > form input[type=submit] {
+	width: fit-content;
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+	background-color: var(--wp--preset--color--dark-red);
+	color: var(--wp--preset--color--base);
+}
 .nav-layout strong {
 	font-weight: 500;
 }
@@ -805,8 +820,22 @@ img.news-image {
 	background-color: var(--faded-black);
 	margin-bottom: var(--wp--preset--spacing--10);
 }
-.search-result ul.search-types li a {
+.search-result ul.search-types li a:not(.academic) {
 	font-weight: 500;
+}
+
+.search-result ul.search-types li .academic {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.search-result ul.search-types li .academic .details {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+}
+.search-result .picture {
+	max-width: 50px;
 }
 
 /*** Search Result END ***/
@@ -831,11 +860,9 @@ img.news-image {
 		width: max-content;
 	}
 
-
 	.no-mobile-padding {
 		padding: 0;
 	}
-
 
 	/*** ASIDE ***/
 	#aside {
@@ -867,7 +894,6 @@ img.news-image {
 		border: none
 	}
 
-
 	.vertical-padding-40 {
 		padding-top: var(--wp--preset--spacing--20);
 		padding-bottom: var(--wp--preset--spacing--20);
@@ -895,7 +921,6 @@ img.news-image {
 		padding-left: 0;
 	}
 
-
 	/*** ACTIVITY ***/
 	.activity_single {
 		grid-template-columns: 1fr;
@@ -909,6 +934,19 @@ img.news-image {
 	}
 	.activity_card.top-gap {
 		padding-top: calc(var(--wp--preset--spacing--80) + var(--wp--preset--spacing--40));
+	}
+
+	.mobile-justify-center {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mobile-full-width {
+		width: 100%;
+	}
+
+	.mobile-half-width {
+		width: 50%;
 	}
 }
 

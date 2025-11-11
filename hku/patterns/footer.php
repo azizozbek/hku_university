@@ -22,7 +22,7 @@
 
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|80"},"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"top","justifyContent":"space-between","orientation":"horizontal"}} -->
             <div class="wp-block-group"><!-- wp:group {"style":{"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
-                <div class="wp-block-group"><!-- wp:site-logo {"width":200,"shouldSyncIcon":true} /-->
+                <div class="wp-block-group mobile-justify-center"><!-- wp:site-logo {"width":200,"shouldSyncIcon":true} /-->
 
                     <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
                     <div class="wp-block-group">
@@ -34,7 +34,7 @@
                 <!-- /wp:group -->
 
                 <!-- wp:group {"fontSize":"regular","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"top"}} -->
-                <div class="wp-block-group has-regular-font-size"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                <div class="wp-block-group has-regular-font-size mobile-full-width mobile-justify-center"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
                     <div class="wp-block-group"><!-- wp:outermost/icon-block {"iconName":"wordpress-mapMarker","width":"24px"} -->
                         <div class="wp-block-outermost-icon-block"><div class="icon-container" style="width:24px;transform:rotate(0deg) scaleX(1) scaleY(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9c-.8 0-1.5.7-1.5 1.5S11.2 12 12 12s1.5-.7 1.5-1.5S12.8 9 12 9zm0-5c-3.6 0-6.5 2.8-6.5 6.2 0 .8.3 1.8.9 3.1.5 1.1 1.2 2.3 2 3.6.7 1 3 3.8 3.2 3.9l.4.5.4-.5c.2-.2 2.6-2.9 3.2-3.9.8-1.2 1.5-2.5 2-3.6.6-1.3.9-2.3.9-3.1C18.5 6.8 15.6 4 12 4zm4.3 8.7c-.5 1-1.1 2.2-1.9 3.4-.5.7-1.7 2.2-2.4 3-.7-.8-1.9-2.3-2.4-3-.8-1.2-1.4-2.3-1.9-3.3-.6-1.4-.7-2.2-.7-2.5 0-2.6 2.2-4.7 5-4.7s5 2.1 5 4.7c0 .2-.1 1-.7 2.4z"></path></svg></div></div>
                         <!-- /wp:outermost/icon-block -->
@@ -112,7 +112,7 @@
         <!-- /wp:spacer -->
 
         <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-        <div class="wp-block-group alignfull"><!-- wp:paragraph {"fontSize":"small"} -->
+        <div class="wp-block-group mobile-justify-center"><!-- wp:paragraph {"fontSize":"small"} -->
             <p class="has-small-font-size">Hasan Kalyoncu University ©️ 2025</p>
             <!-- /wp:paragraph -->
 

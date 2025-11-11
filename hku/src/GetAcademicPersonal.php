@@ -70,6 +70,26 @@ class GetAcademicPersonal extends WpRemote
         return $persons;
     }
 
+    public function searchByName(string $name)
+    {
+        $data = $this->get_remote_data();
+        $persons = [];
+        $i = 0;
+        foreach ($data as $academical) {
+            if (str_contains(strtolower($academical['name']), strtolower($name))) {
+                $department = (DepartmentEnum::tryFrom($academical['department'])) ?: null;
+
+                $persons[$i]['name'] = $academical['name'];
+                $persons[$i]['picture'] = $academical['profile_image_path'];
+                $persons[$i]['department'] = $department->getTranslatedValue();
+                $persons[$i]['url'] = get_site_url(1) . DIRECTORY_SEPARATOR . $department->name . DIRECTORY_SEPARATOR . "academic";
+            }
+            $i++;
+        }
+
+        return $persons;
+    }
+
     public function get_remote_data() {
         // $json = parent::get_remote_data();
         return [
@@ -108,7 +128,7 @@ class GetAcademicPersonal extends WpRemote
                 ]
             ],
             [
-                'name' => "Test Ozbek",
+                'name' => "Test Aziz",
                 'title' => "Dr",
                 'unvan_gorev' => "Lecturer",
                 'profile_image_path' => 'https://ef.hku.edu.tr/wp-content/uploads/2019/04/ahmet-ayaz.jpg',

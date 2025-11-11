@@ -10,10 +10,6 @@
  */
 function academic_personals() {
 
-    if (get_current_blog_id() === 1) {
-        return [];
-    }
-
     $facultyId = get_option(\HKU\Theme\AddFacultyOption::OPTION_NAME);
     $getAcademicPersonal = new \HKU\Theme\GetAcademicPersonal();
 
@@ -37,6 +33,7 @@ function academic_personals() {
 }
 
 $personals = academic_personals();
+
 ?>
 <div class="academic">
     <?php

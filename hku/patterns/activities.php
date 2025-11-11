@@ -80,7 +80,7 @@ $query = new WP_Query( $args );
         <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
         <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:button -->
             <div class="wp-block-button">
-                <a class="wp-block-button__link wp-element-button hover-white is-layout-flex is-vertically-aligned-center is-vertically-aligned-center gap-20" href="<?php echo get_post_type_archive_link(\HKU\Theme\PostTypeActivity::POST_TYPE); ?>">
+                <a class="wp-block-button__link wp-element-button hover-white is-layout-flex is-vertically-aligned-center gap-20" href="<?php echo get_post_type_archive_link(\HKU\Theme\PostTypeActivity::POST_TYPE); ?>">
                     <?php esc_html_e( 'Tüm Aktiviteler', 'hku' ); ?>
                     <svg width="20" height="12" viewBox="0 0 12 6" fill="white" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.67329 2.33334H0.666626V3.66668H8.67329V5.66668L11.3333 3.00001L8.67329 0.333344V2.33334Z"/>

@@ -134,7 +134,10 @@ $navigation = new Navigation();
                     <div>
                         <h2><?php echo __("Ara", "hku") ?></h2>
                         <form method="get" action="<?php echo get_site_url() ?>">
-                            <input type="text" name="s" alt="<?php _e("Ara", "hku"); ?>" placeholder="<?php _e("Bişeyler yaz...", "hku"); ?>">
+                            <label for="s">
+                                <input type="text" id="s" name="s" alt="<?php _e("Ara", "hku"); ?>" placeholder="<?php _e("Bişeyler yaz...", "hku"); ?>">
+                                <input type="submit" value="<?php _e('Ara', 'hku'); ?>">
+                            </label>
                         </form>
                     </div>
                 </div>
