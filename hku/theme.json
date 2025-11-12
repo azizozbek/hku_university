@@ -627,6 +627,11 @@
 			"area": "uncategorized",
 			"name": "searchresult",
 			"title": "Global Search Result"
+		},
+		{
+			"area": "uncategorized",
+			"name": "featured_image",
+			"title": "Get the featured image with title"
 		}
 	],
 	"customTemplates": [
