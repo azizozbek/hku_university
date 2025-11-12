@@ -7,13 +7,9 @@
  */
 
 global $query_string;
-$page = get_query_var('page');
 
 wp_parse_str( $query_string, $search_query );
-$search_query = array_merge($search_query, [
-        'paged' => $page,
-        'posts_per_page'    => 10,
-    ]);
+$search_query = array_merge($search_query);
 
 $search = new WP_Query( $search_query );
 $getAcademicPerson = new \HKU\Theme\GetAcademicPersonal();
@@ -33,72 +29,74 @@ function highlight_results($text) {
     return false;
 }
 
-$posts = [];
+$posts = [
+    \HKU\Theme\PostTypeActivity::POST_TYPE => [],
+    \HKU\Theme\PostTypeNews::POST_TYPE => [],
+    'post' => [],
+    'page' => []
+];
 foreach ($search->posts as $post) {
     $posts[$post->post_type][] = $post;
 }
-
+$emptyMessage = __('Bulunumadı', 'hku');
 ?>
 
 <div class="search-result has-global-padding">
-    <div class="pagination">
-        <?php
-        echo paginate_links( array(
-            'total'        => $search->max_num_pages,
-            'current'      => max( 1, $page ),
-            'format'       => '?page=%#%',
-            'show_all'     => false,
-            'type'         => 'plain',
-            'end_size'     => 2,
-            'mid_size'     => 1,
-            'prev_next'    => true,
-            'prev_text'    => sprintf( '<i></i> %1$s', __( 'Newer', 'hku' ) ),
-            'next_text'    => sprintf( '%1$s <i></i>', __( 'Older', 'hku' ) ),
-            'add_args'     => false,
-            'add_fragment' => '',
-        ) );
-        ?>
-    </div>
     <ul class="search-types">
-        <h2><?php _e('Etkinlikler', 'hku'); ?></h2>
-        <?php foreach ($posts[\HKU\Theme\PostTypeActivity::POST_TYPE] as $post) :?>
+        <h2 class="title"><?php _e('Etkinlikler', 'hku'); ?></h2>
+        <?php
+            if (count($posts[\HKU\Theme\PostTypeActivity::POST_TYPE]) == 0) {
+                echo "<span>" . $emptyMessage . "</span>";
+            }
+
+            foreach ($posts[\HKU\Theme\PostTypeActivity::POST_TYPE] as $post) :?>
             <li>
                 <a href="<?php echo get_the_permalink($post) ?>"><?php echo $post->post_title; ?></a>
                 <span><?php echo highlight_results(wp_strip_all_tags( $post->post_content)); ?></span>
             </li>
         <?php endforeach; ?>
 
-        <h2><?php _e('Haberler', 'hku'); ?></h2>
-        <?php foreach ($posts[\HKU\Theme\PostTypeNews::POST_TYPE] as $post) :?>
+        <h2 class="title"><?php _e('Haberler', 'hku'); ?></h2>
+        <?php
+            if (count($posts[\HKU\Theme\PostTypeActivity::POST_TYPE]) == 0) {
+                echo "<span>" . $emptyMessage . "</span>";
+            }
+            foreach ($posts[\HKU\Theme\PostTypeNews::POST_TYPE] as $post) :?>
             <li>
                 <a href="<?php echo get_the_permalink($post) ?>"><?php echo $post->post_title; ?></a>
                 <span><?php echo highlight_results(wp_strip_all_tags( $post->post_content)); ?></span>
             </li>
         <?php endforeach; ?>
 
-        <h2><?php _e('Sayfalar', 'hku'); ?></h2>
-        <?php foreach ($posts['page'] as $post) :?>
+        <h2 class="title"><?php _e('Sayfalar', 'hku'); ?></h2>
+        <?php
+            if (count($posts[\HKU\Theme\PostTypeActivity::POST_TYPE]) == 0) {
+                echo "<span>" . $emptyMessage . "</span>";
+            }
+            foreach ($posts['page'] as $post) :?>
             <li>
                 <a href="<?php echo get_the_permalink($post) ?>"><?php echo $post->post_title; ?></a>
                 <span><?php echo highlight_results(wp_strip_all_tags( $post->post_content)); ?></span>
             </li>
         <?php endforeach; ?>
 
-        <h2><?php _e('Akademik Personeller', 'hku'); ?></h2>
-        <ul>
-            <?php foreach ($academicPersons as $academicPerson) : ?>
-                <li>
-                    <a class="academic" href="<?php echo $academicPerson['url'] ?>">
-                        <img class="picture" src="<?php echo $academicPerson['picture'] ?>" alt="<?php echo $academicPerson['name']; ?>">
-                        <div class="details">
-                            <b><?php echo $academicPerson['name']; ?></b>
-                            <span><?php echo $academicPerson['department'] ?></span>
-                        </div>
-                    </a>
+        <h2 class="title"><?php _e('Akademik Personeller', 'hku'); ?></h2>
+        <?php
+            if (count($academicPersons) == 0) {
+                echo "<span>" . $emptyMessage . "</span>";
+            }
+        ?>
+        <?php foreach ($academicPersons as $academicPerson) : ?>
+            <li>
+                <a class="academic" href="<?php echo $academicPerson['url'] ?>">
+                    <img class="picture" src="<?php echo $academicPerson['picture'] ?>" alt="<?php echo $academicPerson['name']; ?>">
+                    <div class="details">
+                        <b><?php echo $academicPerson['name']; ?></b>
+                        <span><?php echo $academicPerson['department'] ?></span>
+                    </div>
+                </a>
 
-                </li>
-            <?php endforeach; ?>
-
-        </ul>
+            </li>
+        <?php endforeach; ?>
     </ul>
 </div>

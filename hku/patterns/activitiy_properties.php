@@ -42,7 +42,7 @@ $list['Yer'] = $location;
 $output = '<ul class="properties">';
 foreach ($list as $activity => $key) {
     if ($activity) {
-        $output .= '<li class="hover-red">'. __($activity) . ': ' . $key .'</li>';
+        $output .= '<li class="hover-red"><b>'. __($activity) . '</b>: ' . $key .'</li>';
     }
 }
 $output .= '</ul>';

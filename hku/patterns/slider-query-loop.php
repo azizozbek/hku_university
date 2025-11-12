@@ -28,10 +28,9 @@ $query = new WP_Query( array(
                         <div class="embla__lazy-load slider_image <?php if(get_field('url') != '') { echo 'has_link'; } ?>" data-url="<?php echo get_field('url') ?>">
                             <span class="embla__lazy-load__spinner"></span>
                             <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => "https://hku.edu.tr.ddev.site/wp-content/uploads/2025/10/hku-logo-colorful-tr.webp"]); ?>
-                            <div class="slider_content">
-                                <h3 class="slider_title no-vertical-margin "><?php the_title(); ?></h3>
-                            </div>
-
+                            <?php if (get_the_title() != "") : ?>
+                                    <h3 class="slider_content no-vertical-margin "><?php the_title(); ?></h3>
+                            <?php endif; ?>
                         </div>
                     </div>
             <?php

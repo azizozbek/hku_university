@@ -94,7 +94,7 @@ class GetAcademicPersonal extends WpRemote
         // $json = parent::get_remote_data();
         return [
             [
-                'name' => "Seher Sevim",
+                'name' => "Aziz Sevim",
                 'title' => "Prof. Dr.",
                 'unvan_gorev' => "Head of department",
                 'profile_image_path' => 'https://ef.hku.edu.tr/wp-content/uploads/2024/12/Ekran-Resmi-2024-12-06-OO%E2%80%AF12.02.29-450x600.png',

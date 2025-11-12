@@ -96,9 +96,7 @@ $navigation = new Navigation();
                                             foreach ($navigation->get_children_of_menu($child->ID) as $subChild) {
                                                 $subChildTitle = $subChild->title ?: $subChild->post_title;
                                                 ?>
-                                                <li><a href="<?php echo $subChild->url; ?>" class="<?php if ($navigation->isActive($subChild->object_id)) { echo 'dark-red'; } ?>"><?php echo $subChildTitle; ?>
-                                                        <svg width="9" height="10" viewBox="0 0 21 22" fill="black" xmlns="http://www.w3.org/2000/svg" class="alignright"><path d="M1.62502 0.708313V3.87498H15.2259L0.041687 19.0591L2.27419 21.2916L17.4584 6.10748V19.7083H20.625V0.708313H1.62502Z"></path></svg>
-                                                    </a></li>
+                                                <li><a href="<?php echo $subChild->url; ?>" class="<?php if ($navigation->isActive($subChild->object_id)) { echo 'dark-red'; } ?>"><?php echo $subChildTitle; ?></a></li>
                                             <?php } ?>
                                         </ul>
                                     <?php } ?>

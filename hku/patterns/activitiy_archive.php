@@ -93,8 +93,8 @@ $query = new WP_Query( $args );
         'end_size'     => 2,
         'mid_size'     => 1,
         'prev_next'    => true,
-        'prev_text'    => sprintf( '<i></i> %1$s', __( 'Newer', 'hku' ) ),
-        'next_text'    => sprintf( '%1$s <i></i>', __( 'Older', 'hku' ) ),
+        'prev_text'    => sprintf( '<i></i> %1$s', __( 'Yeni', 'hku' ) ),
+        'next_text'    => sprintf( '%1$s <i></i>', __( 'Eski', 'hku' ) ),
         'add_args'     => false,
         'add_fragment' => '',
     ) );
