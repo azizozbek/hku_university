@@ -38,7 +38,18 @@ $posts = [
 foreach ($search->posts as $post) {
     $posts[$post->post_type][] = $post;
 }
-$emptyMessage = __('Bulunumadı', 'hku');
+$emptyMessage = "<span>" . __('Bulunumadı', 'hku') . "</span>";
+
+function renderList($post)
+{
+    $output = '<li>';
+    $output .= '<a href="'. get_the_permalink($post) .'">' . $post->post_title . '</a>';
+    $output .= '<span>' . highlight_results(wp_strip_all_tags( $post->post_content)) . '</span>';
+    $output .= '</li>';
+
+    return $output;
+}
+
 ?>
 
 <div class="search-result has-global-padding">
@@ -46,50 +57,46 @@ $emptyMessage = __('Bulunumadı', 'hku');
         <h2 class="title"><?php _e('Etkinlikler', 'hku'); ?></h2>
         <?php
             if (count($posts[\HKU\Theme\PostTypeActivity::POST_TYPE]) == 0) {
-                echo "<span>" . $emptyMessage . "</span>";
+                echo $emptyMessage;
             }
 
-            foreach ($posts[\HKU\Theme\PostTypeActivity::POST_TYPE] as $post) :?>
-            <li>
-                <a href="<?php echo get_the_permalink($post) ?>"><?php echo $post->post_title; ?></a>
-                <span><?php echo highlight_results(wp_strip_all_tags( $post->post_content)); ?></span>
-            </li>
-        <?php endforeach; ?>
+            foreach ($posts[\HKU\Theme\PostTypeActivity::POST_TYPE] as $post) {
+                echo renderList($post);
+            } ?>
 
         <h2 class="title"><?php _e('Haberler', 'hku'); ?></h2>
         <?php
-            if (count($posts[\HKU\Theme\PostTypeActivity::POST_TYPE]) == 0) {
-                echo "<span>" . $emptyMessage . "</span>";
+            if (count($posts[\HKU\Theme\PostTypeNews::POST_TYPE]) == 0) {
+                echo $emptyMessage;
             }
-            foreach ($posts[\HKU\Theme\PostTypeNews::POST_TYPE] as $post) :?>
-            <li>
-                <a href="<?php echo get_the_permalink($post) ?>"><?php echo $post->post_title; ?></a>
-                <span><?php echo highlight_results(wp_strip_all_tags( $post->post_content)); ?></span>
-            </li>
-        <?php endforeach; ?>
+            foreach ($posts[\HKU\Theme\PostTypeNews::POST_TYPE] as $post) {
+                echo renderList($post);
+            } ?>
 
         <h2 class="title"><?php _e('Sayfalar', 'hku'); ?></h2>
         <?php
-            if (count($posts[\HKU\Theme\PostTypeActivity::POST_TYPE]) == 0) {
-                echo "<span>" . $emptyMessage . "</span>";
+            if (count($posts['post']) == 0 && count($posts['page']) == 0) {
+                echo $emptyMessage;
             }
-            foreach ($posts['page'] as $post) :?>
-            <li>
-                <a href="<?php echo get_the_permalink($post) ?>"><?php echo $post->post_title; ?></a>
-                <span><?php echo highlight_results(wp_strip_all_tags( $post->post_content)); ?></span>
-            </li>
-        <?php endforeach; ?>
+
+            foreach ($posts['page'] as $post) {
+                echo renderList($post);
+            } ?>
+
+            <?php foreach ($posts['post'] as $post) {
+                echo renderList($post);
+            } ?>
 
         <h2 class="title"><?php _e('Akademik Personeller', 'hku'); ?></h2>
         <?php
             if (count($academicPersons) == 0) {
-                echo "<span>" . $emptyMessage . "</span>";
+                echo $emptyMessage;
             }
         ?>
         <?php foreach ($academicPersons as $academicPerson) : ?>
             <li>
                 <a class="academic" href="<?php echo $academicPerson['url'] ?>">
-                    <img class="picture" src="<?php echo $academicPerson['picture'] ?>" alt="<?php echo $academicPerson['name']; ?>">
+                    <img class="picture" src="<?php echo $academicPerson['picture'] ?>" alt="<?php echo $academicPerson['name']; ?>" title="<?php echo $academicPerson['name']; ?>">
                     <div class="details">
                         <b><?php echo $academicPerson['name']; ?></b>
                         <span><?php echo $academicPerson['department'] ?></span>
