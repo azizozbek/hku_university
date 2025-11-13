@@ -67,7 +67,9 @@ strong {
 .base-color {
 	color: var(--wp--preset--color--base);
 }
-
+.text-uppercase {
+	text-transform: uppercase;
+}
 /* Focus styles */
 :where(.wp-site-blocks *:focus) {
 	outline-width: 2px;
