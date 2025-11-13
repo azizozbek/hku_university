@@ -24,6 +24,7 @@
         $(".search-button").on("click", function (e) {
             $(".nav-layout").addClass( "hidden" );
             $(".search-layout").toggleClass( "hidden" );
+            document.getElementById('s').focus();
         });
 
         $(".burger-button").on("click", function (e) {

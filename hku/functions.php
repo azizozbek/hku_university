@@ -54,15 +54,6 @@ $facultyOption = new AddFacultyOption();
 HKU_Integrations::instance();
 
 
-add_action('pre_get_posts', function ($query) {
-    if ($query->is_main_query() && is_tag()) {
-        $query->set('post_type', array('post', PostTypeNews::POST_TYPE));
-    }
-});
-
-
-
-
 /*
  *
  function register_my_menus() {

@@ -30,9 +30,16 @@ a {
 	text-decoration: none;
 }
 
+summary {
+	text-transform: uppercase;
+	background-color: var(--faded-black);
+	padding: var(--wp--preset--spacing--20);
+}
+
 *:focus {
 	outline-width: 1px;
 	outline-style: solid;
+	word-break: break-word;
 }
 
 a:hover, a:focus {
