@@ -513,10 +513,19 @@ a.burger-button {
 	padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--20);
 }
 
-#aside ul > li > a {
+#aside ul > li {
 	border-bottom: 1px solid var(--wp--preset--color--contrast);
 }
-#aside ul:not(.children) > li:first-child > a {
+
+#aside ul > li .children, #aside ul > li .sub-menu {
+	background-color: var(--faded-black);
+}
+
+#aside ul > li .children > li:last-child, #aside ul > li .sub-menu > li:last-child {
+	border-bottom: none;
+}
+
+#aside ul:not(.children):not(.sub-menu) > li:first-child {
 	border-top: 1px solid var(--wp--preset--color--contrast);
 }
 
@@ -528,28 +537,45 @@ a.burger-button {
 	gap: var(--wp--preset--spacing--10);
 }
 
-#aside ul > li.page_item_has_children > a:after {
-	content: "\f345";
-	font-family: dashicons;
-	display: inline-block;
-	line-height: 1;
-	font-weight: 400;
-	font-style: normal;
-	speak: never;
-	text-decoration: inherit;
-	text-transform: none;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	width: 20px;
-	height: 20px;
-	font-size: 20px;
-	vertical-align: top;
-	text-align: center;
+#aside ul.menu .menu-item, #aside ul .page_item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	align-items: center;
+	justify-items: end;
 }
 
-#aside ul > li.page_item_has_children > ul.children {
+#aside ul.menu .menu-item > a, #aside ul .page_item > a {
+	width: 100%;
+}
+
+#aside ul.menu .menu-item:not(.menu-item-has-children) .sidemenu-toggle, #aside ul .page_item:not(.page_item_has_children) .sidemenu-toggle {
+	display: none;
+	visibility: hidden;
+}
+#aside ul.menu .menu-item:not(.menu-item-has-children) a, #aside ul .page_item:not(.page_item_has_children) a {
+	grid-column: 1 / -1;
+}
+
+#aside ul.menu .menu-item > .sidemenu-toggle, #aside ul .page_item > .sidemenu-toggle {
+	padding: var(--wp--preset--spacing--10);
+	background-color: var(--faded-black);
+	border: none;
+	cursor: pointer;
+	height: 100%;
+	display: block;
+	width: fit-content;
+}
+
+#aside ul.menu > .menu-item > .sidemenu-toggle > svg, #aside ul > .page_item > .sidemenu-toggle > svg {
+	height: 100%;
+}
+
+#aside ul > li.page_item_has_children > ul.children, #aside ul > li.menu-item-has-children > ul.sub-menu {
 	padding-left: var(--wp--preset--spacing--20);
+	display: none;
+	grid-column: 1 / -1;
+	width: 100%;
 }
 
 #aside .parent-header > a {

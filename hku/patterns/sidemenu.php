@@ -16,7 +16,8 @@ function sidemenu($post) {
             'menu' => $menu,
             'container' => 'ul',
             'echo' => 0,
-            'depth' => 1,
+            'depth' => 3,
+            'after' => '<button class="sidemenu-toggle"><svg width="12" height="12" viewBox="0 0 532 532"><path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path></svg></button>'
         ]);
     }
 
@@ -28,7 +29,8 @@ function sidemenu($post) {
         'order' => 'ASC',
         'title_li' => null,
         'echo' => 0,
-        'depth' => 2,
+        'depth' => 3,
+        'link_after' => '</a><button class="sidemenu-toggle"><svg width="12" height="12" viewBox="0 0 532 532"><path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path></svg></button>'
     ));
 }
 
@@ -46,6 +48,10 @@ if (!is_null($post) && $post->post_parent != 0) {
     $parent = get_the_title($post->post_parent);
     $parent_url = get_permalink($post->post_parent);
 }
+if ($post->post_parent == 0 && !is_front_page()) {
+    $parent = get_blog_option(get_current_blog_id(), 'blogname') ;
+    $parent_url = get_blogaddress_by_id(get_current_blog_id());
+}
 
 $siblings = sidemenu($post);
 
@@ -60,7 +66,6 @@ $siblings = sidemenu($post);
                         <?php echo $parent ?>
                     </a>
                     <svg class="open-sidemenu-icon" width="12" height="12" viewBox="0 0 532 532"><path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path></svg>
-
                 </div>
             </header>
             <ul>

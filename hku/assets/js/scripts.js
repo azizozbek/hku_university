@@ -57,6 +57,12 @@
             $(this).toggleClass("rotate270")
         });
 
+        $(".sidemenu-toggle").on("click", function (e) {
+            $(this).find("svg").toggleClass("rotate270");
+            $(this).siblings(".sub-menu").toggle();
+            $(this).siblings(".children").toggle();
+        });
+
         $(".slider_image").each(function () {
             var url = $(this).data('url');
             if (url) {
