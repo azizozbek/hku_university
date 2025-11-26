@@ -31,9 +31,15 @@ $query = new WP_Query( array(
                 <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"default"}} -->
                 <div class="wp-block-column hover-shadow rounded-border has-base-background-color" style="padding-top:0;padding-bottom:0">
                     <!-- wp:image {"id":127,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-                    <figure class="wp-block-image size-full is-style-default">
-                        <?php the_post_thumbnail(attr: ['class' => 'full-width news-image', 'title' => get_the_title()]); ?>
-                    </figure>
+                    <?php if(get_the_post_thumbnail_url()) : ?>
+                        <figure class="wp-block-image size-full is-style-default">
+                            <?php the_post_thumbnail(attr: ['class' => 'full-width news-image', 'title' => get_the_title()]); ?>
+                        </figure>
+                    <?php else: ?>
+                        <figure class="wp-block-image size-large is-resized">
+                            <img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/news-default-min.jpg'; ?>" class="full-width" title="Hasan Kalyoncu University Default News Image" alt="Hasan Kalyoncu University Default News Image"/>
+                        </figure>
+                    <?php endif; ?>
                     <!-- /wp:image -->
 
                     <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"wrap"}} -->

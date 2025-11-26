@@ -53,7 +53,17 @@ $query = new WP_Query( $args );
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <span class="embla__lazy-load__spinner"></span>
                             <?php endif; ?>
-                            <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => "https://www.hku.edu.tr/wp-content/uploads/2018/12/hku-logo-colorful-tr.webp"]); ?>
+                            <!-- wp:image {"id":127,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+                            <?php if(get_the_post_thumbnail_url()) : ?>
+                                <figure class="wp-block-image size-full is-style-default">
+                                    <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => "https://www.hku.edu.tr/wp-content/uploads/2018/12/hku-logo-colorful-tr.webp"]); ?>
+                                </figure>
+                            <?php else: ?>
+                                <figure class="wp-block-image size-large is-resized">
+                                    <img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/activity-default-min.jpg'; ?>" class="full-width" title="Hasan Kalyoncu University Default Activity Image" alt="Hasan Kalyoncu University Default Activity Image"/>
+                                </figure>
+                            <?php endif; ?>
+                            <!-- /wp:image -->
                             <a class="details" href="<?php echo get_the_permalink() ?>">
                                 <h4 class="title font-regular"><?php echo the_title() ?></h4>
                                 <div class="info">
