@@ -29,7 +29,7 @@ $numbers = $getRemoteNumbers->get_remote_data();
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-center","fontSize":"medium"} -->
-                <p class="text-center has-medium-font-size"><?php _e('Mezun', 'hku') ?></p>
+                <p class="text-center has-middle-font-size"><?php _e('Mezun', 'hku') ?></p>
                 <!-- /wp:paragraph --></div>
             <!-- /wp:group --></div>
         <!-- /wp:column -->
@@ -45,7 +45,7 @@ $numbers = $getRemoteNumbers->get_remote_data();
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-center","fontSize":"medium"} -->
-                <p class="text-center has-medium-font-size"><?php _e('Öğrenci', 'hku') ?></p>
+                <p class="text-center has-middle-font-size"><?php _e('Öğrenci', 'hku') ?></p>
                 <!-- /wp:paragraph --></div>
             <!-- /wp:group --></div>
         <!-- /wp:column -->
@@ -61,7 +61,7 @@ $numbers = $getRemoteNumbers->get_remote_data();
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-center","fontSize":"medium"} -->
-                <p class="text-center has-medium-font-size"><?php _e('Akademik Personel', 'hku') ?></p>
+                <p class="text-center has-middle-font-size"><?php _e('Akademik Personel', 'hku') ?></p>
                 <!-- /wp:paragraph --></div>
             <!-- /wp:group --></div>
         <!-- /wp:column -->
@@ -77,7 +77,7 @@ $numbers = $getRemoteNumbers->get_remote_data();
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-center","fontSize":"medium"} -->
-                <p class="text-center has-medium-font-size"><?php _e('Fakülte', 'hku') ?></p>
+                <p class="text-center has-middle-font-size"><?php _e('Fakülte', 'hku') ?></p>
                 <!-- /wp:paragraph --></div>
             <!-- /wp:group --></div>
         <!-- /wp:column -->
@@ -93,7 +93,7 @@ $numbers = $getRemoteNumbers->get_remote_data();
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-center","fontSize":"medium"} -->
-                <p class="text-center has-medium-font-size"><?php _e('Araştırma Merkezi', 'hku') ?></p>
+                <p class="text-center has-middle-font-size"><?php _e('Araştırma Merkezi', 'hku') ?></p>
                 <!-- /wp:paragraph --></div>
             <!-- /wp:group --></div>
         <!-- /wp:column --></div>

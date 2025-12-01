@@ -66,7 +66,7 @@ $defaultImg = get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images
                             <?php endif; ?>
                             <!-- /wp:image -->
                             <a class="details text-center" href="<?php echo get_the_permalink() ?>">
-                                <h4 class="title font-regular"><?php echo the_title() ?></h4>
+                                <h4 class="title font-regular font-large"><?php echo the_title() ?></h4>
                                 <div class="info">
                                     <div class="date">
                                         <span><?php echo wp_date('d F Y', $start->getTimestamp()); ?></span>

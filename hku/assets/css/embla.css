@@ -65,6 +65,11 @@
     flex: 0 0 var(--slide-size);
 }
 
+.embla__slide__img {
+    aspect-ratio: 9/3;
+    object-fit: cover;
+}
+
 .home-slider.embla__controls {
     display: grid;
     grid-template-columns: auto 1fr;

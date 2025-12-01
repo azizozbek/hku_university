@@ -30,7 +30,7 @@ function hku_enqueue_styles() {
         'hku-style',
         get_parent_theme_file_uri( 'style.css' ),
         array(),
-        2.8
+        2.9
     );
     wp_enqueue_style( 'dashicons' );
     wp_enqueue_script( 'hkuscripts', get_parent_theme_file_uri() . '/assets/js/scripts.js', array( 'jquery' ) );

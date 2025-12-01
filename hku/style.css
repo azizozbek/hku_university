@@ -211,6 +211,10 @@ a.no-border {
 	font-size: var(--wp--preset--font-size--small);
 }
 
+.font-large {
+	font-size: var(--wp--preset--font-size--large) !important;
+}
+
 .uppercase {
 	text-transform: uppercase;
 }
@@ -495,7 +499,7 @@ a.burger-button {
 }
 
 .nav-layout ul > li > a {
-	font-size: var(--wp--preset--font-size--medium);
+	font-size: var(--wp--preset--font-size--middle);
 	width: 100%;
 	justify-content: space-between;
 	border-bottom: 1px solid var(--faded-gray);

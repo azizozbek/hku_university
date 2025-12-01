@@ -90,6 +90,12 @@
 				},
 				{
 					"fluid": true,
+					"name": "Middle",
+					"size": "14px",
+					"slug": "middle"
+				},
+				{
+					"fluid": true,
 					"name": "Regular",
 					"size": "16px",
 					"slug": "regular"
