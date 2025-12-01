@@ -90,15 +90,15 @@
 				},
 				{
 					"fluid": true,
-					"name": "Medium",
-					"size": "14px",
-					"slug": "medium"
-				},
-				{
-					"fluid": true,
 					"name": "Regular",
 					"size": "16px",
 					"slug": "regular"
+				},
+				{
+					"fluid": true,
+					"name": "Medium",
+					"size": "20px",
+					"slug": "medium"
 				},
 				{
 					"fluid": true,
@@ -261,7 +261,7 @@
 						},
 						"typography": {
 							"fontFamily": "var:preset|font-family|poppins",
-							"fontSize": "var:preset|font-size|medium",
+							"fontSize": "var:preset|font-size|regular",
 							"lineHeight": "1",
 							"fontStyle": "normal",
 							"fontWeight": "500"
@@ -273,7 +273,7 @@
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|poppins",
-					"fontSize": "var:preset|font-size|medium",
+					"fontSize": "var:preset|font-size|regular",
 					"lineHeight": "1",
 					"fontStyle": "light",
 					"fontWeight": "500"
@@ -550,7 +550,7 @@
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var:preset|font-size|large"
+					"fontSize": "var:preset|font-size|medium"
 				}
 			},
 			"h5": {

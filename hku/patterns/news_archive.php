@@ -1,57 +1,28 @@
 <?php
 /**
- * Title: List all activities
- * Slug: hku/activity_archive
+ * Title: List all news
+ * Slug: hku/news_archive
  * Categories: query
  * Block Types: core/query
  *
  */
 
-$from = get_query_var('from');
 $page = get_query_var('page');
 
-$filter = array(
-    'hku_activity_end' => array(
-        'key' => 'hku_activity_end',
-        'value' => date('Y-m-d H:i:s'),
-        'type' => 'date',
-        'compare' => '>=',
-    ),
-);
-
-if ($from === 'past') {
-    $filter = array(
-        'relation' => 'AND',
-        'hku_activity_start' => array(
-            'key' => 'hku_activity_start',
-            'value' => date('Y-m-d H:i:s'),
-            'type' => 'date',
-            'compare' => '<',
-        ),
-        'hku_activity_end' => array(
-            'key' => 'hku_activity_end',
-            'value' => date('Y-m-d H:i:s'),
-            'type' => 'date',
-            'compare' => '<',
-        ),
-    );
-}
 
 $args = array(
-    'post_type' => \HKU\Theme\PostTypeActivity::POST_TYPE,
+    'post_type' => \HKU\Theme\PostTypeNews::POST_TYPE,
     'post_status' => 'publish',
     'posts_per_page'    => 10,
-    'meta_query' => $filter,
     'orderby' => array(
-        'hku_activity_start' => 'ASC',
-        'hku_activity_end' => 'DESC'
+        'date' => 'ASC',
     ),
     'paged' => $page,
 );
 
 
 $query = new WP_Query( $args );
-$defaultImg = get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/activity-default-min.jpg';;
+$defaultImg = get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/news-default-min.jpg';;
 ?>
 
 <div class="activities">
@@ -59,8 +30,6 @@ $defaultImg = get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images
     // The Loop
     if ( $query->have_posts() ) :
     while ( $query->have_posts() ) : $query->the_post();
-        $start = new \DateTimeImmutable(get_field('hku_activity_start'));
-        $form = \HKU\Theme\ActivityFormsEnum::tryFrom(get_field('hku_activity_form'))->getTranslatedValue();
     ?>
         <div class="activity_card">
             <?php if(get_the_post_thumbnail_url()) : ?>
@@ -69,11 +38,8 @@ $defaultImg = get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images
                 <img src="<?php echo $defaultImg; ?>" class="image image wp-post-image" title="Hasan Kalyoncu University Default Activity Image" alt="Hasan Kalyoncu University Default Activity Image"/>
             <?php endif; ?>
             <div class="activity_details">
-                <span class="date">
-                    <strong class="day"><?php echo $start->format('d'); ?></strong>
-                    <span class="font-small"><?php echo $start->format('F'); ?></span>
-                </span>
-                <h4 class="font-regular text-center title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                <h4 class="font-regular title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                <span class="news_date has-small-font-size has-dark-red-color horizontal-padding-20 vertical-padding-20 is-layout-flex"><?php echo  get_the_date(); ?></span>
             </div>
         </div>
 

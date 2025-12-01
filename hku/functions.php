@@ -30,7 +30,7 @@ function hku_enqueue_styles() {
         'hku-style',
         get_parent_theme_file_uri( 'style.css' ),
         array(),
-        2.7
+        2.8
     );
     wp_enqueue_style( 'dashicons' );
     wp_enqueue_script( 'hkuscripts', get_parent_theme_file_uri() . '/assets/js/scripts.js', array( 'jquery' ) );
@@ -43,6 +43,7 @@ function hku_enqueue_styles() {
             wp_enqueue_script( 'hku-home-slider', get_parent_theme_file_uri() . '/assets/js/home-slider.js', [], '1.0', true );
         }
         wp_enqueue_script( 'hku-activity-slider', get_parent_theme_file_uri() . '/assets/js/activity-slider.js', [], '1.1', true );
+        wp_enqueue_script( 'hku-news-slider', get_parent_theme_file_uri() . '/assets/js/news-slider.js', [], '1.1', true );
     }
 }
 

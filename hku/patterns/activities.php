@@ -33,11 +33,12 @@ $args = array(
 );
 
 $query = new WP_Query( $args );
+$defaultImg = get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/activity-default-min.jpg';;
 
 ?>
 <div class="embla activity is-layout-constrained has-global-padding">
     <!-- wp:heading -->
-    <h2 class="activity-header font-regular"><?php _e('Aktiviteler', 'hku') ?></h2>
+    <h2 class="card-header font-regular"><?php _e('Aktiviteler', 'hku') ?></h2>
     <!-- /wp:heading -->
     <div class="embla__viewport">
         <div class="embla__container">
@@ -49,22 +50,22 @@ $query = new WP_Query( $args );
                     $start = new \DateTimeImmutable(get_field('hku_activity_start'));
                     ?>
                     <div class="embla__slide">
-                        <div class="embla__lazy-load activity-card rounded-border">
+                        <div class="embla__lazy-load slider-card rounded-border">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <span class="embla__lazy-load__spinner"></span>
                             <?php endif; ?>
                             <!-- wp:image {"id":127,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
                             <?php if(get_the_post_thumbnail_url()) : ?>
                                 <figure class="wp-block-image size-full is-style-default">
-                                    <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => "https://www.hku.edu.tr/wp-content/uploads/2018/12/hku-logo-colorful-tr.webp"]); ?>
+                                    <?php the_post_thumbnail(attr: ['class' => 'full-width embla__slide__img embla__lazy-load__img', 'title' => get_the_title(), 'data-src' => $defaultImg]); ?>
                                 </figure>
                             <?php else: ?>
                                 <figure class="wp-block-image size-large is-resized">
-                                    <img src="<?php echo get_parent_theme_file_uri() . DIRECTORY_SEPARATOR . 'assets/images/activity-default-min.jpg'; ?>" class="full-width" title="Hasan Kalyoncu University Default Activity Image" alt="Hasan Kalyoncu University Default Activity Image"/>
+                                    <img src="<?php echo $defaultImg; ?>" class="full-width" title="Hasan Kalyoncu University Default Activity Image" alt="Hasan Kalyoncu University Default Activity Image"/>
                                 </figure>
                             <?php endif; ?>
                             <!-- /wp:image -->
-                            <a class="details" href="<?php echo get_the_permalink() ?>">
+                            <a class="details text-center" href="<?php echo get_the_permalink() ?>">
                                 <h4 class="title font-regular"><?php echo the_title() ?></h4>
                                 <div class="info">
                                     <div class="date">
